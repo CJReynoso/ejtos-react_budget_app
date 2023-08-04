@@ -10,10 +10,10 @@ import { AppProvider } from './context/AppContext';
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal'
 import ExpenseList from './components/ExpenseList'
-import ExpenseItem from './components/ExpenseItem'
 import AllocationForm from './components/AllocationForm'
 
 const App = () => {
+
     return (
         <AppProvider>
             <div className='container'>
@@ -28,40 +28,38 @@ const App = () => {
 
                         {
                             //Remaining component
-                            <div classname='col-sm'>
+                            <div className='col-sm'>
                                 <Remaining/>
                             </div>
                         }        
 
                         {
-                            //Remaining component
+                            //ExpenseTotal component
                             <div className='col-sm'>
                                 <ExpenseTotal/>
                             </div>
-                        }        
-                       
+                        } 
+                    </div>     
+
+                    <h3 className='mt-3'>Allocation</h3>
+                    <div className='row '>
                         {
                             //Expenselist component
                             <div className='col-sm'>
                                 <ExpenseList/>
                             </div>
-                        }         
+                        } 
+                    </div>  
 
-                        {
-                            //ExpenseItem component
-                            <div className='col-sm'>
-                                <ExpenseItem/>
-                            </div>
-                        }        
-
+                    <h3 className='mt-3'>Change allocation</h3>
+                    <div className='row mt-3'>           
                         {
                             //AllocationForm component
                             <div className='col-sm'>
                                 <AllocationForm/>
                             </div>
-                        }        
-
-                </div>
+                        }   
+                    </div>      
             </div>
         </AppProvider>
     );
