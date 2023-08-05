@@ -4,7 +4,7 @@ import {AppContext} from '../context/AppContext'
 
 const Budget = () =>
 {
-    const {budget} = useContext(AppContext);
+    const {budget, currency} = useContext(AppContext);
     const {expenses} = useContext(AppContext);
     const maxBudget=20000;
 
@@ -30,7 +30,7 @@ const Budget = () =>
 
     return(
         <div className='alert alert-secondary'>
-            <span>Budget: £</span>
+            <span>Budget: {currency}</span>
             <input type='number' step='10' min='0' placeholder={budget} onChange={onChangeBudget}></input>
         </div>
     );
